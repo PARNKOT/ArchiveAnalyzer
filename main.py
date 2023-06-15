@@ -74,12 +74,6 @@ def worker():
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-d", "--dir", type=str, help="Directory to analyze")
-
-    args = parser.parse_args()
-    path = "Tracking_objects_2023-06-14_12-48-35(Kreml_3_modules)"#args.dir
-
     app_running_event.set()
 
     worker_thread = Thread(target=worker, name="WorkerThread", daemon=True)
