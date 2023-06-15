@@ -55,5 +55,3 @@ class Statistics:
         with open(f"{path}_statistics.txt", "w") as f:
             f.write(str(self.__statistics))
             f.write(f"\nКоличество ЛП: {self.__false_positive_count}")
-
-

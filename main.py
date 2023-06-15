@@ -1,10 +1,7 @@
-import datetime
 import os
 import argparse
-import time
 import logging
 from typing import List
-from concurrent.futures import ThreadPoolExecutor
 from threading import Thread, Event
 
 from statistics import Statistics, Detection, localize
@@ -91,13 +88,3 @@ if __name__ == '__main__':
     application.mainloop()
     app_running_event.clear()
 
-    # start = time.time()
-    #
-    # # with ThreadPoolExecutor(max_workers=10) as executor:
-    # #     executor.map(parse_description_file, (os.path.join(path, dir_) for dir_ in os.listdir(path)))
-    #
-    # for dir_ in os.listdir(path):
-    #      parse_description_file(os.path.join(path, dir_))
-    #
-    # print(time.time() - start)
-    # print(statistics.localized_statistics)

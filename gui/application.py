@@ -8,6 +8,7 @@ from typing import List
 from threading import Event
 from gui.image_container import ImageContainer
 
+
 class Application(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -22,7 +23,6 @@ class Application(tk.Tk):
         self.title("Vidar archive analyzer")
         self.geometry("850x850")
         self.minsize(850, 850)
-        #self.resizable(False, False)
 
         # Frames
         self.frame_file_chooser = tk.Frame(self, bg="white")
@@ -94,7 +94,6 @@ class Application(tk.Tk):
     def next_button_clicked(self):
         self.next_button_pressed_event.set()
         self.logger.debug("Next button pressed")
-        #self.load_images()
 
 
 def run_app():
